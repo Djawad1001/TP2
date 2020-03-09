@@ -75,6 +75,7 @@ do_action( 'astral_top_banner' );
                  
 
                 echo '</div>';
+                echo '<div class="wp-block-cgb-block-my-block"><p>Bonjour, nous sommes sur le site public</p><p>CGB BLOCK: <code>my-block</code> is a new Gutenberg block.</p><p>It was created via <code><a href="https://github.com/ahmadawais/create-guten-block">create-guten-block</a></code>.</p></div>';
             ?>
         </div>
     </section>
