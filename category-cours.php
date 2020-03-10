@@ -41,6 +41,7 @@ do_action( 'astral_top_banner' );
          // The Loop
          while ( have_posts() ) {
             echo '<br>'; 
+            echo '<h1>Listes des cours du TIM</h1>';
            the_post();
              echo '<h3>' . get_the_title() . '</h3>';
             // echo '<p>'.get_the_excerpt(). '</p>';
