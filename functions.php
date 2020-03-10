@@ -18,8 +18,8 @@ add_action( 'pre_get_posts', 'extraire_coursNom' );
 function extraire_coursNom( $query2 ) {
     if ($query2->is_category('cours'))
     {
-       $query2->set( 'posts_per_page', 10);
-       $query2->set( 'orderby', 'date' );
+       //$query2->set( 'posts_per_page', 10);
+       $query2->set( 'orderby', 'title' );
        $query2->set( 'order', 'ASC' );
     }
  }

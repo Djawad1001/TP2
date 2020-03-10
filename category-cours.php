@@ -39,9 +39,10 @@ do_action( 'astral_top_banner' );
                 //$query1 = new WP_Query(  );
           
          // The Loop
+         echo '<h1>Listes des cours du TIM</h1>';
          while ( have_posts() ) {
             echo '<br>'; 
-            echo '<h1>Listes des cours du TIM</h1>';
+            
            the_post();
              echo '<h3>' . get_the_title() . '</h3>';
             // echo '<p>'.get_the_excerpt(). '</p>';
