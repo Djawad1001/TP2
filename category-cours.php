@@ -24,10 +24,55 @@ do_action( 'astral_top_banner' );
                
                
              
-              // echo '<div class="oGrid" style="background-color:white;">';
+              echo '<div class="oGrid" style="background-color:white;">';
                 // The 2nd Loop
+
+                while (have_posts()) {
+                    the_post();
+                $sSession = substr(get_the_title(), 4,1);
+                    $sDomaine = substr(get_the_title(), 5,1);
+                    
+                    switch($sSession){
+                     case 1:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
                 
-                
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+
+
+                     case 2:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     
+                     echo "</div>";
+                     break;
+
+                     case 3:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+                     case 4:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                   
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+                     case 5:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+                     case 6:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+                     
+                    }
+                    
+                }
+
+                echo '</div>';
                 //while (have_posts()) {
                    //the_post();
                    //$args = array(
@@ -39,12 +84,26 @@ do_action( 'astral_top_banner' );
                 //$query1 = new WP_Query(  );
           
          // The Loop
+        
+         /*
          echo '<h1>Listes des cours du TIM</h1>';
          while ( have_posts() ) {
+
+
+            
+            
+
+
+            
             echo '<br>'; 
             
            the_post();
            echo '<h1 class="session"><a class="lienArticle" href='.get_the_permalink().'>'.get_the_title().'</a></h1><h4 class="session nbsession"> - Session: '.substr(get_the_title(), 4,1).'</h4><h4 class="session nbdomaine"> - domaine: '.substr(get_the_title(), 5,1).'</h4>';
+           
+           
+           
+           
+           
            /*echo '
            <article class="articles-conferences">
                <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article">
@@ -54,10 +113,10 @@ do_action( 'astral_top_banner' );
                    <p class="text-extract">'.substr(get_the_excerpt(),0,200).'</p>
                </div>
            </article>
-           ';*/
+           ';
              //echo '<h3><a' . get_the_title() . '></h3>';
             // echo '<p>'.get_the_excerpt(). '</p>';
-         }
+         }*/
           
          /* Restore original Post Data 
           * NB: Because we are using new WP_Query we aren't stomping on the 
@@ -67,13 +126,43 @@ do_action( 'astral_top_banner' );
           */
          wp_reset_postdata();
 
-                   /*
-			        //get_template_part( 'template-parts/content', 'evenement' );
-                    $oMois = get_the_date("m");
-                    $oJour = get_the_date("j");
+                   
+                    //get_template_part( 'template-parts/content', 'cours' );
+                    
+                    //$oMois = get_the_date("m");
+                    //$oJour = get_the_date("j");
+                    /*echo "<div style='grid-area:".substr(get_the_title(), 4,1)."/".substr(get_the_title(), 5,1)."/1/1;'  class='octobre' id=".get_the_ID().">";
+            
+            echo "<p>".substr(get_the_title(), 0,7)."</p>";
+            echo "</div>";*/
+            /*
+                    $sSession = substr(get_the_title(), 4,1);
+                    $sDomaine = substr(get_the_title(), 5,1);
+                    
+                    switch($sSession){
+                     case 1:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    echo "<p>".$sSession."</p>";
+                    echo "<p>".$sDomaine."</p>";
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
 
-                    
-                    
+
+                     case 2:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    echo "<p>".$sSession."</p>";
+                    echo "<p>".$sDomaine."</p>";
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+
+                     case 3:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                    echo "<p>".$sSession."</p>";
+                    echo "<p>".$sDomaine."</p>";
+                     echo "<p>".substr(get_the_title(), 0,7)."</p>";
+                     echo "</div>";
+                     break;
+                    }*/
+                    /*
                     switch($oMois%9){
                     case 0:echo "<div style='grid-area:".$oJour."/".($oMois%9+1)."/".($oJour+1)."/".($oMois%9+1).";' class='septembre' id=".get_the_ID().">";
                     echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
