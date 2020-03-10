@@ -574,4 +574,28 @@ body {
   border: 1px solid black;
   background-color: red;
 }
+
+.session1 {
+  background-color: red;
+}
+
+.session2 {
+  background-color: #ff0a0a;
+}
+
+.session3 {
+  background-color: #ff1414;
+}
+
+.session4 {
+  background-color: #ff1f1f;
+}
+
+.session5 {
+  background-color: #ff2929;
+}
+
+.session6 {
+  background-color: #ff3333;
+}
 /*# sourceMappingURL=style.css.map */

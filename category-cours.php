@@ -33,36 +33,36 @@ do_action( 'astral_top_banner' );
                     $sDomaine = substr(get_the_title(), 5,1);
                     
                     switch($sSession){
-                     case 1:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 1:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session1' id=".get_the_ID().">";
                 
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      echo "</div>";
                      break;
 
 
-                     case 2:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 2:   echo "<div style='grid-area:".$sSession."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session2' id=".get_the_ID().">";
                      
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      
                      echo "</div>";
                      break;
 
-                     case 3:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 3:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session3' id=".get_the_ID().">";
                     
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      echo "</div>";
                      break;
-                     case 4:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 4:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session4' id=".get_the_ID().">";
                    
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      echo "</div>";
                      break;
-                     case 5:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 5:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session5' id=".get_the_ID().">";
                     
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      echo "</div>";
                      break;
-                     case 6:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='octobre' id=".get_the_ID().">";
+                     case 6:   echo "<div style='grid-area:".$sDomaine."/".$sDomaine."/".($sSession+1)."/".($sDomaine+1).";'  class='session6' id=".get_the_ID().">";
                     
                      echo "<p>".substr(get_the_title(), 0,7)."</p>";
                      echo "</div>";
