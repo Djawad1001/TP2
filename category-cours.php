@@ -44,7 +44,18 @@ do_action( 'astral_top_banner' );
             echo '<br>'; 
             
            the_post();
-             echo '<h3>' . get_the_title() . '</h3>';
+           echo '<h1 class="session"><a class="lienArticle" href='.get_the_permalink().'>'.get_the_title().'</a></h1><h4 class="session nbsession"> - Session: '.substr(get_the_title(), 4,1).'</h4><h4 class="session nbdomaine"> - domaine: '.substr(get_the_title(), 5,1).'</h4>';
+           /*echo '
+           <article class="articles-conferences">
+               <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article">
+               <div class="content-post">
+                   <h3 class="title-article"><a href='.get_the_permalink().'>'.get_the_title().'</a></h3>
+                   <h4 class="post-date">'.get_the_date().'</h4>
+                   <p class="text-extract">'.substr(get_the_excerpt(),0,200).'</p>
+               </div>
+           </article>
+           ';*/
+             //echo '<h3><a' . get_the_title() . '></h3>';
             // echo '<p>'.get_the_excerpt(). '</p>';
          }
           

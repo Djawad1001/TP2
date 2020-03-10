@@ -392,49 +392,49 @@ body {
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: white;
+/*.navbar-light .navbar-nav .nav-link{
+    color:red;
+}*/
+/*
+li a:hover{
+    //color:rgb(52, 214, 255) !important;
+    transition:all 0.5s;
+    letter-spacing: 1px;
+    
+    &:after {
+        content: ""; 
+        display: block; 
+        margin: 0 auto; 
+        width: 95%; 
+         
+        transition:0.5s all;
+        padding-top:1%;
+        border-bottom: 1px solid rgb(255, 255, 255); */
+/* This creates the border. Replace black with whatever color you want. */
+/*}
+}*/
+/*
+li a{
+    transition:all 0.5s;
+    padding:0 !important;
+
+    &:after{
+        content:"";
+        display:block;
+        margin:0 auto;
+        width:0%;
+        border-bottom:1px solid white;
+        padding-top:1%;
+        transition:0.5s all;
+    }
+}*/
+div#main-menu {
+  background: grey;
+  color: red;
 }
 
-li a:hover {
-  color: #34d6ff !important;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  letter-spacing: 1px;
-}
-
-li a:hover:after {
-  content: "";
-  /* This is necessary for the pseudo element to work. */
-  display: block;
-  /* This will put the pseudo element on its own line. */
-  margin: 0 auto;
-  /* This will center the border. */
-  width: 95%;
-  /* Change this to whatever width you want. */
-  /* This creates some space between the element and the border. */
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  padding-top: 1%;
-  border-bottom: 1px solid white;
-  /* This creates the border. Replace black with whatever color you want. */
-}
-
-li a {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  padding: 0 !important;
-}
-
-li a:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  width: 0%;
-  border-bottom: 1px solid white;
-  padding-top: 1%;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+li {
+  color: red;
 }
 
 p {
@@ -499,6 +499,30 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.session {
+  display: inline;
+}
+
+.nbsession {
+  color: red;
+}
+
+.nbdomaine {
+  color: yellow;
+}
+
+.lienArticle:hover {
+  color: #3498db;
+}
+
+.lienArticle:focus {
+  color: #f1c40f;
+}
+
+.lienArticle:active {
+  color: #2ecc71;
 }
 
 @-webkit-keyframes animationRectangle1 {

@@ -44,6 +44,24 @@ body{
     align-items:center;
     flex-direction:column;
 }
+.session{
+    display: inline;
+}
+.nbsession{
+    color:red;
+}
+.nbdomaine{
+    color:yellow;
+}
+.lienArticle:hover{
+    color:$couleur_bleu;
+}
+.lienArticle:focus{
+    color:$couleur_jaune;
+}
+.lienArticle:active{
+    color:$couleur_vert;
+}
 
 
 @keyframes animationRectangle1{
