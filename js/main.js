@@ -1,4 +1,7 @@
-// let collectionBtnNouvelle = 
+
+
+let collectionBtnNouvelle = document.querySelectorAll("input[type=button]");
+
 // let collectionNouvelle = 
 console.log(collectionBtnNouvelle.length)
 if (collectionBtnNouvelle)
@@ -13,10 +16,10 @@ if (collectionBtnNouvelle)
 function Ajax(evt) {
     
     //  instructions ici
-
+    console.log(evt.target.id);
     let maRequete = new XMLHttpRequest();
     console.log(maRequete)
-    maRequete.open('GET', 'http://localhost/dtb/wp-json/wp/v2/posts'); // modifier ici
+    maRequete.open('GET', 'http://localhost/dtb/wp-json/wp/v2/posts/' + evt.target.getAttribute("id")); // modifier ici
     maRequete.onload = function () {
         console.log(maRequete)
         if (maRequete.status >= 200 && maRequete.status < 400) {
@@ -36,20 +39,22 @@ function Ajax(evt) {
 
     // instructions à ajouter
 
-}
+
 ///////////////////////////////////////////////////////
 
 function creationHTML(postsData){
     let monHtmlString = '';
     for (elm of postsData) {
-        /*
+        
         monHtmlString += '<h2>' + elm.title.rendered + '</h2>'
         monHtmlString += elm.content.rendered;
-    */
+    
    console.log(elm);
 }
     contenuNouvelle.innerHTML = monHtmlString; 
 }
+
+
 
 
 

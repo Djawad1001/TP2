@@ -23,7 +23,7 @@ get_header();
 			the_post();
             the_post_thumbnail('full');
 			//get_template_part( 'template-parts/content', 'page' );
-
+           
 			// If comments are open or we have at least one comment, load up the comment template.
 			
 
@@ -76,6 +76,7 @@ get_header();
     $query1->the_post();
      echo '<h3>' . get_the_title() . '</h3>';
      echo '<p>'.get_the_excerpt(). '</p>';
+     echo "<input id=".get_the_ID()." type='button' value='lire la suite...'>";
  }
   
  /* Restore original Post Data 

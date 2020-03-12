@@ -19,7 +19,7 @@ add_action( 'pre_get_posts', 'extraire_cours' );
 function extraire_cours( $query ) {
     if ($query->is_category('evenement'))
     {
-       $query->set( 'posts_per_page', 3 );
+       $query->set( 'posts_per_page', 60 );
        $query->set( 'orderby', 'date' );
        $query->set( 'order', 'ASC' );
     }

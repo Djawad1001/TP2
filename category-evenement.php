@@ -19,6 +19,27 @@ do_action( 'astral_top_banner' );
 	<section class="align-blog" id="blog">
         <div class="container">
             <?php
+
+
+// echo '<div class="oGrid">';
+
+
+// while ( have_posts() ) :
+//     the_post();
+//     $mois = (int)get_the_date('m');
+//     $mois = ($mois % 3) + 1;
+  
+//     $jour = (int)get_the_date('j'); 
+//     $gridArea = $jour . '/' . $mois; 
+//     //echo $gridArea;
+//     echo '<h2 class="titreEvent"><a href='.get_the_permalink().'>' . get_the_title() .' ' . get_the_date('j-m-Y') .'</a></h2>';
+//     //echo '<h4 style="grid-area:'. $gridArea .'">' . get_the_title() .  get_the_ID() . get_the_date('Y-m-d') . '</h4>'; 
+
+
+
+// endwhile; // End of the loop.
+
+// echo '</div>';
                 
                 
                
@@ -64,7 +85,7 @@ do_action( 'astral_top_banner' );
                     
                     }
                            
-                            
+                           
                      
                         
 

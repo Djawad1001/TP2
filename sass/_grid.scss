@@ -1,6 +1,14 @@
 .oGrid{
     display:grid;
+   
     grid-template-columns: repeat(3,1fr);
+    .titreEvent{
+        border:1px solid black;
+        background-color: red;
+    }
+}
+.container {
+    background-color: red;
 }
 
 .octobre{
