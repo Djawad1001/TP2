@@ -2,7 +2,8 @@
 
 let collectionBtnNouvelle = document.querySelectorAll("input[type=button]");
 
-// let collectionNouvelle = 
+let collectionNouvelle = document.querySelectorAll("lol");
+console.log(collectionNouvelle.length)
 console.log(collectionBtnNouvelle.length)
 if (collectionBtnNouvelle)
 {
@@ -42,15 +43,15 @@ function Ajax(evt) {
 
 ///////////////////////////////////////////////////////
 
-function creationHTML(postsData){
+function creationHTML(data){
     let monHtmlString = '';
-    for (elm of postsData) {
+
         
-        monHtmlString += '<h2>' + elm.title.rendered + '</h2>'
-        monHtmlString += elm.content.rendered;
+        monHtmlString += '<h2>' + data.title.rendered + '</h2>';
+        monHtmlString += data.content.rendered;
     
-   console.log(elm);
-}
+   console.log(data);
+
     contenuNouvelle.innerHTML = monHtmlString; 
 }
 
