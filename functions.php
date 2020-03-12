@@ -13,7 +13,7 @@ function my_theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
         wp_get_theme()->get('Version'));
-   // wp_enqueue_script( 'main_js',get_stylesheet_directory_uri() . '/js/main.js', NULL, 1.0,true);
+    wp_enqueue_script( 'main_js',get_stylesheet_directory_uri() . '/js/main.js', NULL, 1.0,true);
 }
 add_action( 'pre_get_posts', 'extraire_cours' );
 function extraire_cours( $query ) {
