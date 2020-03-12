@@ -71,17 +71,21 @@ get_header();
  $query1 = new WP_Query( $args );
   
  // The Loop
+
  while ( $query1->have_posts() ) {
+
+    echo '<div class="nouvelle" id="nouvelle_"'.get_the_ID().'>';
+
+    echo '</div>';
     echo '<br>'; 
     $query1->the_post();
-    echo '<div data-id'.get_the_ID().'>';
+    echo '<div id='.get_the_ID().'>';
      echo '<h3>' . get_the_title() . '</h3>';
      echo '<p>'.get_the_excerpt(). '</p>';
      echo "<input id=".get_the_ID()." type='button' value='lire la suite...'>";
     echo '</div>';
 
-    echo '<div id="lol">';
-    echo '</div>';
+    
 
 
 
