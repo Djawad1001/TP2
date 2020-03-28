@@ -1,4 +1,4 @@
-
+﻿
 
 let collectionBtnNouvelle = document.querySelectorAll("input[type=button]");
 
@@ -25,7 +25,8 @@ function Ajax(evt) {
     console.log(evt.target.id);
     let maRequete = new XMLHttpRequest();
     console.log(maRequete)
-    maRequete.open('GET', 'http://localhost/dtb/wp-json/wp/v2/posts/' + idNouvelle); // modifier ici
+//maRequete.open('GET', 'https://localhost/dtb/wp-json/wp/v2/posts/' + idNouvelle); // modifier ici
+    maRequete.open('GET', 'https://e1655470.webdev.cmaisonneuve.qc.ca/veille/wp-json/wp/v2/posts/' + idNouvelle); // modifier ici
     maRequete.onload = function () {
         console.log(maRequete)
         if (maRequete.status >= 200 && maRequete.status < 400) {
