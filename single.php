@@ -1,56 +1,49 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
- * @package Astral
- * @since 0.1
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package underscore
  */
+
 get_header();
-/* 
-* Functions hooked into astral_top_banner action
-* 
-* @hooked astral_inner_banner
-*/
-do_action( 'astral_top_banner' );
-/* 
-* Functions hooked into astral_breadcrumb_area action
-* 
-* @hooked astral_breadcrumb
-*/
-do_action( 'astral_breadcrumb_area' );
 ?>
-<div id="content">
-    <section class="align-blog" id="blog">
-        <div class="container">
-            <div class="row">
-                <!-- left side -->
-                <div class="col-lg-8 single-left mt-lg-0 mt-4">
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-						get_template_part( 'post', 'content' );
-					endwhile;
-					endif;
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+		
+		<?php
+		// Affichage de la requête $query par défaut 
+		while ( have_posts() ) :
+			the_post();
+			//the_title();
+			// le filtre pour les articles de catégorie «evenement»
+			if (has_category('evenement'))
+			{
+			//echo '/// mon événement ////';
+			echo '<h1>Voici les événements</h1>';
+			echo '<h2>' . category_description(get_category_by_slug('evenement')) . '</h2>';	
 
-					/*
-					* Functions hooked into astral_pagination action
-					*
-					* @hooked astral_navigation
-					*/
-					do_action( 'astral_single_blog_navigation' );
+			echo '<h1>'.the_title().'</h1>';
+			the_content();
+			}
+			/* tous les autres articles */
+			else {
+				the_title();
+				// tout autre codes te permettant d'afficher un article standard
+			}
+		endwhile; // fin de la boucle
 
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-                </div>
-                <!-- right side -->
-                <div class="col-lg-4 event-right">
-					<?php get_sidebar(); ?>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+		?>
+	</section>
+    </main><!-- #main -->
+	</div><!-- #primary -->
 <?php
+
+get_sidebar();
 get_footer();
