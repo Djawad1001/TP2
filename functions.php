@@ -15,19 +15,15 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version'));
     wp_enqueue_script( 'main_js',get_stylesheet_directory_uri() . '/js/main.js', NULL, 1.0,true);
 }
-add_action( 'pre_get_posts', 'extraire_cours' );
+/*add_action( 'pre_get_posts', 'extraire_cours' );
 function extraire_cours( $query ) {
     if ($query->is_category('evenement'))
     {
-<<<<<<< HEAD
-       $query->set( 'posts_per_page', 3);
-=======
-       $query->set( 'posts_per_page', 30);
->>>>>>> 7949e75c1d4917a8bd90719ae8fe480f4e2db0fe
+       $query->set( 'posts_per_page', 60);
        $query->set( 'orderby', 'date' );
        $query->set( 'order', 'ASC' );
     }
- }
+ }*/
 
 add_action( 'pre_get_posts', 'extraire_coursNom' );
 function extraire_coursNom( $query2 ) {
