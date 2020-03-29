@@ -97,7 +97,7 @@ get_header();
   * wp_reset_query(). We just need to set the post data back up with
   * wp_reset_postdata().
   */
- wp_reset_postdata();
+ //wp_reset_postdata();
   
 
 
@@ -218,5 +218,5 @@ wp_reset_postdata();*/
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

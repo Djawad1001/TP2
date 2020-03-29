@@ -8,7 +8,7 @@
 ?>
 <footer class="footer py-md-5 pt-md-3 pb-sm-5">
 	
-    <h1>Épreuve Finale - Veille technologique</h1>
+    <h1>TP2 - Veille technologique</h1>
 </footer>
 
 <!-- scroll top icon -->
