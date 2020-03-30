@@ -1,6 +1,6 @@
 .oGrid{
     display:grid;
-   
+   text-align:center;
     grid-template-columns: repeat(3,1fr);
     /*.titreEvent{
         color : black;
@@ -22,7 +22,7 @@
 }
 .septembre{
     border:1px solid black;
-    background-color: cyan  ;
+    background-color: white  ;
 }
 .novembre{
     border:1px solid black;

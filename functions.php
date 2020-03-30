@@ -15,6 +15,11 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version'));
     wp_enqueue_script( 'main_js',get_stylesheet_directory_uri() . '/js/main.js', NULL, 1.0,true);
 }
+
+/**
+ * Le code en commentaire a été réalisé directement dans front-page.php sinon il y avait un 
+ * probleme etre front-page.php et category-evenement.php
+ */
 /*add_action( 'pre_get_posts', 'extraire_cours' );
 function extraire_cours( $query ) {
     if ($query->is_category('evenement'))

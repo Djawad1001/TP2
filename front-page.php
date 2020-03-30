@@ -27,7 +27,99 @@ get_header();
 			// If comments are open or we have at least one comment, load up the comment template.
 			
 
-		endwhile; // End of the loop.
+        endwhile; // End of the loop.
+        
+
+// The Query
+
+$args = array(
+    "category_name" => "nouvelles",
+    "posts_per_page" => 3,
+    "orderby" => 'date',
+    "order"=>"ASC"
+);
+$query1 = new WP_Query( $args );
+
+// The Loop
+
+while ( $query1->have_posts() ) {
+
+echo '<div class="nouvelle" id="nouvelle_"'.get_the_ID().'>';
+
+echo '</div>';
+echo '<br>'; 
+$query1->the_post();
+echo '<div id='.get_the_ID().'>';
+echo '<h3>' . get_the_title() . '</h3>';
+echo '<p>'.get_the_excerpt(). '</p>';
+echo "<input id=".get_the_ID()." type='button' value='lire la suite...'>";
+echo '</div>';
+
+
+
+
+
+}
+
+//ARG2
+
+$args2 = array (
+
+"category_name" => "evenement",
+"posts_per_page" => 3
+
+
+
+
+);
+$query2 = new WP_Query($args2);
+
+//$category = get_the_category($query2->post->ID);
+
+echo "<h1>Événements</h1>";
+echo "<h1>".category_description(get_category_by_slug( 'evenement' )->term_id)."</h1>";
+// The 2nd Loop
+while ( $query2->have_posts() ) {
+
+$query2->the_post();
+echo '
+<article class="articles-conferences" style="display:flex;">
+<img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article" style="display:inline-block; width:15%;margin-left:2%;margin-bottom:2%;margin-right:2%">
+<div class="content-post">
+    <h3 class="title-article"><a href='.get_the_permalink().'>'.get_the_title().'</a></h3>
+    <h4 class="post-date">'.get_the_date().'</h4>
+    <p class="text-extract">'.substr(get_the_excerpt(),0,200).'</p>
+</div>
+</article>
+';
+
+
+
+/**
+ * -===========================================================
+ * ======TOUT LE RESTE EN DESSOUS A SERVI COMME MODELE POUR LES DIFFERENTS EXERCICES=====
+ * ======A NE PAS TROP CONSIDERER POUR LA CORRECTION DU TP=====
+ * ===========================================================
+ * 
+ * 
+ */
+/*
+echo '' 
+.get_the_post_thumbnail(null,"thumbnail"). '
+<h3>' .get_the_title(). '</h3>'
+.get_the_excerpt().;
+*/
+
+//$query3->the_post();
+//echo '<div class="divConference" style="background-color:white"; padding:1%;">';
+
+//echo '<h4>'.get_the_title(). ' - '  . get_the_date() . '</h4>';
+//echo '<h4>' . get_the_date() . '</h4>';
+//echo get_the_post_thumbnail(null,"thumbnail");
+//echo the_excerpt();
+//echo '</div>';
+
+}
 		/*
         $args3 = array (
      
@@ -60,36 +152,7 @@ get_header();
         
         // Restore original Post Data
         wp_reset_postdata();*/
- // The Query
-
- $args = array(
-            "category_name" => "nouvelles",
-            "posts_per_page" => 3,
-            "orderby" => 'date',
-            "order"=>"ASC"
- );
- $query1 = new WP_Query( $args );
-  
- // The Loop
-
- while ( $query1->have_posts() ) {
-
-    echo '<div class="nouvelle" id="nouvelle_"'.get_the_ID().'>';
-
-    echo '</div>';
-    echo '<br>'; 
-    $query1->the_post();
-    echo '<div id='.get_the_ID().'>';
-     echo '<h3>' . get_the_title() . '</h3>';
-     echo '<p>'.get_the_excerpt(). '</p>';
-     echo "<input id=".get_the_ID()." type='button' value='lire la suite...'>";
-    echo '</div>';
-
-    
-
-
-
- }
+ 
   
  /* Restore original Post Data 
   * NB: Because we are using new WP_Query we aren't stomping on the 
@@ -130,54 +193,7 @@ echo the_excerpt();
 /*
 wp_reset_postdata();*/
   
-//ARG2
- 
-        $args2 = array (
-     
-            "category_name" => "evenement",
-            "posts_per_page" => 3
-            
-            
-        
-            
-        );
-        $query2 = new WP_Query($args2);
-        
-        //$category = get_the_category($query2->post->ID);
-        
-        echo "<h1>Événements</h1>";
-        echo "<h1>".category_description(get_category_by_slug( 'evenement' )->term_id)."</h1>";
-        // The 2nd Loop
-        while ( $query2->have_posts() ) {
 
-            $query2->the_post();
-            echo '
-            <article class="articles-conferences" style="display:flex;">
-                <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article" style="display:inline-block; width:15%;margin-left:2%;margin-bottom:2%;margin-right:2%">
-                <div class="content-post">
-                    <h3 class="title-article"><a href='.get_the_permalink().'>'.get_the_title().'</a></h3>
-                    <h4 class="post-date">'.get_the_date().'</h4>
-                    <p class="text-extract">'.substr(get_the_excerpt(),0,200).'</p>
-                </div>
-            </article>
-            ';
-            /*
-            echo '' 
-            .get_the_post_thumbnail(null,"thumbnail"). '
-             <h3>' .get_the_title(). '</h3>'
-             .get_the_excerpt().;
-             */
-            
-            //$query3->the_post();
-            //echo '<div class="divConference" style="background-color:white"; padding:1%;">';
-        
-            //echo '<h4>'.get_the_title(). ' - '  . get_the_date() . '</h4>';
-            //echo '<h4>' . get_the_date() . '</h4>';
-            //echo get_the_post_thumbnail(null,"thumbnail");
-            //echo the_excerpt();
-            //echo '</div>';
-            
-        }
         
         // Restore original Post Data
         wp_reset_postdata();
