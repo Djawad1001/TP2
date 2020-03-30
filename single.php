@@ -29,7 +29,8 @@ get_header();
 			echo '<h1>Voici les événements</h1>';
 			echo '<h2>' . category_description(get_category_by_slug('evenement')) . '</h2>';	
 
-			echo '<h1>'.the_title().'</h1>';
+			echo '<h2>'.the_title().'</h2>';
+			echo '<img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article" style="display:inline-block; width:15%;margin-left:2%;margin-bottom:2%;margin-right:2%">';
 			the_content();
 			}
 			/* tous les autres articles */
@@ -45,5 +46,5 @@ get_header();
 	</div><!-- #primary -->
 <?php
 
-get_sidebar();
+//get_sidebar();
 get_footer();

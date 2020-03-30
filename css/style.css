@@ -904,11 +904,16 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  /*.titreEvent{
+        color : black;
+        //border:1px solid black;
+        //background-color: red;
+    }*/
 }
 
-.oGrid .titreEvent {
-  border: 1px solid black;
-  background-color: red;
+.oGrid .TitreEvenement {
+  color: black;
+  font-weight: 300;
 }
 
 .container {

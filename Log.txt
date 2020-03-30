@@ -1,0 +1,11 @@
+Site Webdev :
+
+Pour la page principale : e1655470.cmaisonneuve.qc.ca/veille/
+Pour la page évenement :  e1655470.cmaisonneuve.qc.ca/veille/category/evenement
+
+Dépôt Github
+https://github.com/Djawad1001/TP2/
+
+Les logs pour vous connecter en admin à WordPress sur webdev
+Nom d'utilisateur : Djawad1001
+Mot de passe : nassim1001 

@@ -61,7 +61,7 @@ do_action( 'astral_top_banner' );
                     switch($oMois%9){
                     case 0:echo "<div style='grid-area:".$oJour."/".($oMois%9+1)."/".($oJour+1)."/".($oMois%9+1).";' class='septembre' id=".get_the_ID().">";
                     echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
-                    echo '<h2 class="titreEvent"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
+                    echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
                     //echo "<p>".get_the_title()."</p>";
                     echo "</div>";
                     break;
@@ -71,7 +71,7 @@ do_action( 'astral_top_banner' );
                     echo "<div style='grid-area:".$oJour."/".($oMois%9+1)."/".($oJour+1)."/".($oMois%9+1).";'  class='octobre' id=".get_the_ID().">";
                     echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
                     //echo "<p>".get_the_title()."</p>";
-                    echo '<h2 class="titreEvent"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
+                    echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
                     echo "</div>";
                     break;
                     
@@ -81,7 +81,7 @@ do_action( 'astral_top_banner' );
                     echo "<div style='grid-area:".$oJour."/".($oMois%9+1)."/".($oJour+1)."/".($oMois%9+1).";'  class='novembre' id=".get_the_ID().">";
                     echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
                     //echo "<p>".get_the_title()."</p>";
-                    echo '<h2 class="titreEvent"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
+                    echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().'>' . get_the_title() .'</a></h2>';
                     echo "</div>";
                     break;
                     }

@@ -152,8 +152,8 @@ wp_reset_postdata();*/
 
             $query2->the_post();
             echo '
-            <article class="articles-conferences">
-                <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article">
+            <article class="articles-conferences" style="display:flex;">
+                <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article" style="display:inline-block; width:15%;margin-left:2%;margin-bottom:2%;margin-right:2%">
                 <div class="content-post">
                     <h3 class="title-article"><a href='.get_the_permalink().'>'.get_the_title().'</a></h3>
                     <h4 class="post-date">'.get_the_date().'</h4>
