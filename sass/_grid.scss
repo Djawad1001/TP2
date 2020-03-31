@@ -18,14 +18,16 @@
     }
     .lienEvent:hover{
 
-        animation:encadreAHref;
-        animation-duration:3s;
-        
-       
         border: solid 3px black;
+       
+     
         color: black;
         text-decoration:none
     }
+}
+.titreArticleEvent{
+    font-size:1.7rem;
+    color:$couleurBleuHeader;
 }
 .container {
     background-color: $couleurBleuHeader;
@@ -48,15 +50,6 @@
 
 
 
-@keyframes encadreAHref{
-    from {border-bottom: solid 3px black;
-        
-    }
-
-
-    to {border: solid 3px black;
-    }
-  }
 
 
 

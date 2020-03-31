@@ -33,10 +33,11 @@ do_action( 'astral_top_banner' );
                     $oJour = get_the_date("j");
 
                     
-                    
+                    //Bien que l'affichage marque 2020, tous les événements ont été réalisés et ecrit pour 2019 comme ca on peut les voir. 
+                    //Je ne peux pas avoir un événement dans le futur. 
                     switch($oMois%4){
                     case 0:echo "<div style='grid-area:".$oJour."/".($oMois%4+1)."/".($oJour+1)."/".($oMois%4+1).";' class='septembre' id=".get_the_ID().">";
-                    echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
+                    echo "<p>" . get_the_date("j") ." avril 2020</p>";
                     echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().' class="lienEvent">' . get_the_title() .'</a></h2>';
                     //echo "<p>".get_the_title()."</p>";
                     echo "</div>";
@@ -45,7 +46,7 @@ do_action( 'astral_top_banner' );
                     case 1:
 
                     echo "<div style='grid-area:".$oJour."/".($oMois%4+1)."/".($oJour+1)."/".($oMois%4+1).";'  class='octobre' id=".get_the_ID().">";
-                    echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
+                    echo "<p>" . get_the_date("j") ." mai 2020</p>";
                     //echo "<p>".get_the_title()."</p>";
                     echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().' class="lienEvent">' . get_the_title() .'</a></h2>';
                     echo "</div>";
@@ -55,7 +56,7 @@ do_action( 'astral_top_banner' );
 
                     case 2:
                     echo "<div style='grid-area:".$oJour."/".($oMois%4+1)."/".($oJour+1)."/".($oMois%4+1).";'  class='novembre' id=".get_the_ID().">";
-                    echo "<p>" . get_the_date("j") ." - ".get_the_date("m"). " - ".get_the_date("y") ."</p>";
+                    echo "<p>" . get_the_date("j") ." juin 2020</p>";
                     //echo "<p>".get_the_title()."</p>";
                     echo '<h2 style="color:black; font-weight:600;"><a href='.get_the_permalink().' class="lienEvent">' . get_the_title() .'</a></h2>';
                     echo "</div>";
