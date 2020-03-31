@@ -10,8 +10,29 @@ body{
     border-radius:25px;
     animation-timing-function: ease-in-out;
 }
+.site-main{
+    margin-left:2%
+}
+.article-evenement{
+    display: flex;
+    margin-bottom:2%;
+}
+.article-evenement:hover{
+    //display:inline-block; width:15%;margin-left:2%;margin-bottom:2%;margin-right:2%
+    animation: articleColor;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+   
+}
 
-
+@keyframes articleColor{
+    from{
+        background-color:#d8d8d8;
+    }
+    to{
+        background-color:#aeaeae;
+    }
+}
 .divConference {
     background-color:white !important;
 }
